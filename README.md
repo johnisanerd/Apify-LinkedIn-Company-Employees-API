@@ -164,7 +164,7 @@ A contact who appears in the list is confirmed as current staff. A contact who i
 - Up to 1,000 people per company with `maxResultsPerCompany`, and up to 100 search slices per company with `maxSearchQueriesPerCompany`
 - A shared cache for recent profiles, company pages and searches, with `maxAgeDays` to tighten it or switch it off
 - Datasets download as JSON, CSV or Excel, with a ready-made Employees view
-- Works as an MCP tool in Claude, Cursor and ChatGPT (see the install sections below); an n8n community node is open source on GitHub (see Use from n8n)
+- Works as an MCP tool in Claude, Cursor and ChatGPT (see the install sections below), and as an n8n community node (see Use from n8n)
 
 ### Data Quality
 - `verified` and `matchReason` on every employee row; people whose profile shows no current role at the company are never returned
@@ -450,7 +450,7 @@ Yes. Save your input as a task in the Apify Console and schedule it monthly. Com
 
 ## Use from n8n
 
-An n8n community node for this API is open source on GitHub: [n8n-nodes-linkedin-company-employees-api](https://github.com/johnisanerd/n8n-nodes-linkedin-company-employees-api). It is not on npm yet. Once it is published, it installs on a self-hosted n8n from **Settings > Community Nodes** as `n8n-nodes-linkedin-company-employees-api`, with your Apify API token as the credential.
+Available as an n8n community node, **[n8n-nodes-linkedin-company-employees-api](https://www.npmjs.com/package/n8n-nodes-linkedin-company-employees-api)**. In n8n: Settings, Community Nodes, install `n8n-nodes-linkedin-company-employees-api`, then use it in any workflow (it also works as an AI Agent tool). Add your Apify API token as the credential. The source is on [GitHub](https://github.com/johnisanerd/n8n-nodes-linkedin-company-employees-api), with example workflows for account mapping, talent mapping and a monthly CRM contact check. n8n Cloud only allows verified community nodes, so install it on a self-hosted n8n.
 
 ---
 
@@ -596,4 +596,4 @@ For support or requests for this actor, please start a ticket [directly on our s
 
 *Use the LinkedIn Company Employees API to power your talent mapping, account mapping and CRM hygiene workflows with reliable, structured results.*
 
-Last Updated: 2026.10.03
+Last Updated: 2026.10.04
