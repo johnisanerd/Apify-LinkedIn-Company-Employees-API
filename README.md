@@ -388,6 +388,10 @@ Open a ready-to-send prompt about the LinkedIn Company Employees API in the AI o
 
 ## People also search for
 
+### Will this put my LinkedIn or LinkedIn Recruiter account at risk?
+
+No. It reads public LinkedIn pages only, the ones anyone can open while signed out. It never logs in and never asks for your cookies: there is no input for an account, a password or an `li_at` session cookie. Nothing it does is tied to your LinkedIn account, your LinkedIn Recruiter seat or your Sales Navigator license. The requests run on Apify's servers, not in your browser, so nothing connects them to you, and you can keep working in Recruiter while a run is going.
+
 ### How can I find a list of employees at a company?
 
 Add the company's LinkedIn URL or name to `companies` and run the API. It searches for the company's people, opens each public profile, and returns the ones whose profile shows a current role there, with name, title, location and profile URL. The result is a partial list: only people whose public profiles appear in search results can be found, and `RUN_SUMMARY` tells you what share of LinkedIn's employee count a run reached.
