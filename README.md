@@ -162,7 +162,7 @@ A contact who appears in the list is confirmed as current staff. A contact who i
 - Narrow by `titleKeywords` (up to 20) and `locations` (up to 10); both also add searches that surface more people
 - `verifyEmployment` on by default; off for a faster, search-level list
 - Up to 1,000 people per company with `maxResultsPerCompany`, and up to 100 search slices per company with `maxSearchQueriesPerCompany`
-- A shared cache for recent profiles, company pages and searches, with `maxAgeDays` to tighten it or switch it off
+- A shared cache for recent profiles, company pages and searches: repeat requests come back faster
 - Datasets download as JSON, CSV or Excel, with a ready-made Employees view
 - Works as an MCP tool in Claude, Cursor and ChatGPT (see the install sections below), and as an n8n community node (see Use from n8n)
 
@@ -221,8 +221,7 @@ Engineers and recruiters at two companies in Dublin, using every input parameter
   "locations": ["Dublin"],
   "maxResultsPerCompany": 50,
   "verifyEmployment": true,
-  "maxSearchQueriesPerCompany": 40,
-  "maxAgeDays": 1
+  "maxSearchQueriesPerCompany": 40
 }
 ```
 
@@ -262,7 +261,6 @@ Only `companies` is required. Everything else narrows or limits the run.
 | `maxResultsPerCompany` | integer | no | `100` | Stop after delivering this many people for each company, 1 to 1,000. You are charged only for people actually returned. |
 | `verifyEmployment` | boolean | no | `true` | Open each person's public profile and confirm a current role at the company. `false` returns a faster, search-level list (name, headline, profile URL). |
 | `maxSearchQueriesPerCompany` | integer | no | `40` | Cap on the public search slices per company, 1 to 100. Each slice returns about ten people, so more slices reach more of a large company. The run also scales the slices down when its budget is small. |
-| `maxAgeDays` | integer | no | per record type | Serve results fetched within this many days from the shared cache, 0 to 90. `0` always fetches fresh. Left empty, the cache keeps profiles up to 7 days, company pages up to 30 days and searches up to 1 day. |
 
 ## Output Format
 

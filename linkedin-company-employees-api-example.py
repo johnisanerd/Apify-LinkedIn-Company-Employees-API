@@ -50,7 +50,6 @@ RUN_INPUT: dict[str, Any] = {
     # "locations": ["San Francisco"],            # keep only people in these cities, regions or countries
     # "verifyEmployment": False,                 # default True; False is a faster search-level list
     # "maxSearchQueriesPerCompany": 20,          # default 40; fewer search slices is quicker but finds fewer people
-    # "maxAgeDays": 0,                           # 0 always fetches fresh; leave it out for the cache defaults
 }
 
 
