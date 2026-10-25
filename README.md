@@ -598,4 +598,4 @@ For support or requests for this actor, please start a ticket [directly on our s
 
 *Use the LinkedIn Company Employees API to power your talent mapping, account mapping and CRM hygiene workflows with reliable, structured results.*
 
-Last Updated: 2026.10.04
+Last Updated: 2026.10.25
